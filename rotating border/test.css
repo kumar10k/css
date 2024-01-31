@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box{
+    height: 400px;
+    width: 300px;
+    background-color: black;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    
+}
+.box::before{
+    content: '';
+    position: absolute;
+    width: 180px;
+    height: 140%;
+    background: linear-gradient(#FF61D2 ,#FE9090);
+    box-shadow: 0px 10px 10px 10px rgb(133, 216, 126);
+    animation: animate 4s linear infinite ;
+
+}
+@keyframes animate{
+    from{
+        rotate: 0deg;
+    }
+    to{
+        rotate: 360deg;
+    }
+}
+.box::after{
+    content: '';
+    position: absolute;
+    border-radius: 16px;
+    inset: 6px;
+    background: rgb(136, 115, 45);
+}
